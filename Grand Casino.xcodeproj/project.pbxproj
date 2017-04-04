@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2233B5F81E93306B00B69729 /* game.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2233B5F71E93306B00B69729 /* game.wav */; };
 		22CAEDA91E8B54A2002D2337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAEDA81E8B54A2002D2337 /* AppDelegate.swift */; };
 		22CAEDAB1E8B54A2002D2337 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 22CAEDAA1E8B54A2002D2337 /* GameScene.sks */; };
 		22CAEDAD1E8B54A2002D2337 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 22CAEDAC1E8B54A2002D2337 /* Actions.sks */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2233B5F71E93306B00B69729 /* game.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game.wav; sourceTree = "<group>"; };
 		22CAEDA51E8B54A2002D2337 /* Grand Casino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grand Casino.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CAEDA81E8B54A2002D2337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CAEDAA1E8B54A2002D2337 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -41,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2233B5F21E932F7B00B69729 /* sfx */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sfx;
+			sourceTree = "<group>";
+		};
 		22CAED9C1E8B54A2002D2337 = {
 			isa = PBXGroup;
 			children = (
@@ -63,8 +72,10 @@
 				22CAEDA81E8B54A2002D2337 /* AppDelegate.swift */,
 				22CAEDAA1E8B54A2002D2337 /* GameScene.sks */,
 				22CAEDAC1E8B54A2002D2337 /* Actions.sks */,
+				2233B5F71E93306B00B69729 /* game.wav */,
 				22CAEDAE1E8B54A2002D2337 /* GameScene.swift */,
 				22CAEDB01E8B54A2002D2337 /* GameViewController.swift */,
+				2233B5F21E932F7B00B69729 /* sfx */,
 				22CAEDB21E8B54A2002D2337 /* Main.storyboard */,
 				22CAEDB51E8B54A2002D2337 /* Assets.xcassets */,
 				22CAEDB71E8B54A2002D2337 /* LaunchScreen.storyboard */,
@@ -136,6 +147,7 @@
 				22CAEDAB1E8B54A2002D2337 /* GameScene.sks in Resources */,
 				22CAEDB61E8B54A2002D2337 /* Assets.xcassets in Resources */,
 				22CAEDB91E8B54A2002D2337 /* LaunchScreen.storyboard in Resources */,
+				2233B5F81E93306B00B69729 /* game.wav in Resources */,
 				22CAEDAD1E8B54A2002D2337 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

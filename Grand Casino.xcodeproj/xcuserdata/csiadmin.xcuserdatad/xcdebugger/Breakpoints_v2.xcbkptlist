@@ -2,4 +2,99 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Grand Casino/GameScene.swift"
+            timestampString = "512964203.02294"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "GameScene"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Grand_Casino.GameScene.img1.getter : __ObjC.SKSpriteNode"
+                  moduleName = "Grand Casino"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csiadmin/Documents/CSIAmerica/Development/ios/slotmc/code/Grand%20Casino/Grand%20Casino/GameScene.swift"
+                  timestampString = "512963494.597717"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Grand_Casino.GameScene.img1.setter : __ObjC.SKSpriteNode"
+                  moduleName = "Grand Casino"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csiadmin/Documents/CSIAmerica/Development/ios/slotmc/code/Grand%20Casino/Grand%20Casino/GameScene.swift"
+                  timestampString = "512963494.602076"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Grand_Casino.GameScene.init (size : __C.CGSize) -&gt; Grand_Casino.GameScene"
+                  moduleName = "Grand Casino"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csiadmin/Documents/CSIAmerica/Development/ios/slotmc/code/Grand%20Casino/Grand%20Casino/GameScene.swift"
+                  timestampString = "512963494.604075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "531">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Grand_Casino.GameScene.init () -&gt; Grand_Casino.GameScene"
+                  moduleName = "Grand Casino"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csiadmin/Documents/CSIAmerica/Development/ios/slotmc/code/Grand%20Casino/Grand%20Casino/GameScene.swift"
+                  timestampString = "512963494.606113"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "511">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Grand_Casino.GameScene.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Grand_Casino.GameScene&gt;"
+                  moduleName = "Grand Casino"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/csiadmin/Documents/CSIAmerica/Development/ios/slotmc/code/Grand%20Casino/Grand%20Casino/GameScene.swift"
+                  timestampString = "512963494.607857"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "522">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

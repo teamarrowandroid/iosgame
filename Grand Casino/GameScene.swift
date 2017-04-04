@@ -1,36 +1,70 @@
-//
-//  GameScene.swift
-//  Grand Casino
-//
-//  Created by CSI Admin on 2017-03-28.
-//  Copyright © 2017 apps. All rights reserved.
-//
+
+  /* 
+
+ File Name : GameScene.swift
+ 
+ Project Name : Grand Casino
+
+ Created by Jaismeen Sandhu on 2017-03-28.
+
+ Copyright © 2017 apps. All rights reserved.
+
+ Last Modified : 2017-04-03
+ 
+ Last Modified By : Harpreet
+ 
+ Description: It shows the complete gui as well game functionality of slot machine
+ 
+ Revision History : 
+ 
+ v1.0 Created GUI
+ v1.1 Updated code for GUI
+ v1.2 Added pull Handle functionallity
+ v1.3 Added reset and quit functions
+ 
+ */
+
+
+
+
+
 
 import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
     
-    
+    //background node
     let background = SKSpriteNode(imageNamed: "slotmachine")
+    
+    //Button nodes
     let spin = SKSpriteNode(imageNamed: "spin")
     let reset = SKSpriteNode(imageNamed: "reset")
     let bet = SKSpriteNode(imageNamed: "bet")
+    let quit = SKSpriteNode(imageNamed: "quit")
+    
+    // Money Nodes
     let bets = SKLabelNode()
     let winnings = SKLabelNode()
     let totalamt = SKLabelNode()
     let status = SKLabelNode()
-
     
+    //music node
+    var spinsound = SKAction.playSoundFileNamed("game.wav", waitForCompletion: false)
+    
+    //slots nodes
     var img1 = SKSpriteNode(imageNamed: "bell")
     var img2 = SKSpriteNode(imageNamed: "bell")
     var img3 = SKSpriteNode(imageNamed: "bell")
     
-    let slotimg = ["banana","grapes","cherry","bell","orange"]
+    // slot images
+    let slotimg = ["banana","grapes","cherry","bell","orange","seven"]
     
+    // set inial amount
     var betamt = 10
     var intTotal = 1000
     var win = 0
+    
     
     var currentimg1:String = ""
     var currentimg2:String = ""
@@ -39,6 +73,8 @@ class GameScene: SKScene {
     var active:Bool = false
     
     override func didMove(to view: SKView) {
+        
+        // GUI Setting and positioning
         background.position = CGPoint(x: 0, y: 0)
         background.zPosition = -100
         addChild(background)
@@ -98,11 +134,17 @@ class GameScene: SKScene {
         
         status.position = CGPoint(x: 5, y: 160)
         status.fontName = "AvenirNext-Bold"
-        status.fontSize = 35.0
+        status.fontSize = 30.0
         status.text = "Let's Play !!!"
         status.horizontalAlignmentMode = .center
         status.zPosition = 100
         addChild(status)
+        
+        quit.position = CGPoint(x:0, y: 520)
+        quit.scale(to: CGSize(width: 100, height: 100))
+        quit.zPosition = 100
+        addChild(quit)
+        
         
         
     }
@@ -113,10 +155,11 @@ class GameScene: SKScene {
         guard let touch = touches.first else {
             return
         }
-//        let touchLocation = touch.location(in: spin)
+        
+            // Spin button functionality
          if (spin.contains(touch.location(in: self)) && (active == false))
          {
-            
+            playSound(spinsound: spinsound)
             betamt = Int(bets.text!)!
             intTotal = Int(totalamt.text!)!
             print ("spinning .....")
@@ -146,6 +189,8 @@ class GameScene: SKScene {
             self.run(SKAction.sequence([wait, spin1, wait, spin2, wait, spin3, wait, test]))
         }
         
+         // bet button functionality
+        
         if bet.contains(touch.location(in: self))
         {
             betamt = Int(bets.text!)!
@@ -160,24 +205,32 @@ class GameScene: SKScene {
             
         }
         
+         // Reset button functionality
+        
         if reset.contains(touch.location(in: self))
         {
             bets.text = "100"
             totalamt.text = "1000"
             winnings.text = "0"
-            status.fontSize = 35.0
+            status.fontSize = 30.0
             status.text = "Let's Play !!!"
             spin.texture = SKTexture(imageNamed: "spin")
             active = false
-            
-            
+        }
+        
+         // quit button functionality
+        
+        if quit.contains(touch.location(in: self))
+        {
+            exit(0)
         }
         
     }
     
+    
+    
+    // Spin button function
     func spin (which:Int){
-        
-        
         
         let randomNum:UInt32 = arc4random_uniform(UInt32(slotimg.count))
         
@@ -202,6 +255,7 @@ class GameScene: SKScene {
         
     }
     
+     //  function to declare and display the output of a pull handle or spin pressed
     func testvalues(){
         betamt = Int(bets.text!)!
         intTotal = Int(totalamt.text!)!
@@ -237,11 +291,14 @@ class GameScene: SKScene {
         totalamt.text = String(intTotal)
         winnings.text = String(win)
         
+        
+        // Checks if total credits became zero or less than bet amount
         if(intTotal == 0 || intTotal < betamt){
             active = true
             status.fontSize = 30.0
             status.text = "Reset to Play"
             spin.texture = SKTexture(imageNamed: "spine")
+            
             
         }
         else
@@ -251,7 +308,13 @@ class GameScene: SKScene {
         }
     }
     
-
+    //  sound functionality
+    func playSound(spinsound : SKAction)
+    {
+        spinsound.duration = 1
+        run(spinsound)
+        
+    }
 }
 
 
